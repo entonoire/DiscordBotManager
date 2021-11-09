@@ -1,7 +1,7 @@
 # DiscordBotManager
 test to control a bot (with a token)
 
-#TODO
+# TODO
 
 - [ ] make a menu that contain every fonction
 - [ ] make a bar where you can put the token and a eye to hide and show (like a password)
