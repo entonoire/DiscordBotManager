@@ -1,5 +1,6 @@
 package fr.vallfeur.dbm;
 
+import fr.vallfeur.dbm.components.TokenBar;
 import fr.vallfeur.dbm.resources.Colors;
 import fr.vallfeur.dbm.resources.ColorsEnum;
 import javafx.application.Application;
@@ -30,13 +31,17 @@ public class Main extends Application{
 		stage.setWidth(960);
 		stage.setResizable(true);
 		stage.centerOnScreen();
-//		stage.getIcons().add(new Image());
+//		*waiting for an icon* stage.getIcons().add(new Image());
 		stage.setOnCloseRequest(event -> {
 			System.exit(0);
 		});
 		
 //		-- set background color --
-		pane.setStyle("-fx-background-color: rgb("+Colors.get(ColorsEnum.RGB, ColorsEnum.GRAY)+");");
+		pane.setStyle("-fx-background-color: rgb("+Colors.get(ColorsEnum.RGB, ColorsEnum.DARKGRAY)+");");
+		
+		
+//		-- load all components --
+		children.addAll(TokenBar.load_field(), TokenBar.load_eye());
 	}
 	
 }

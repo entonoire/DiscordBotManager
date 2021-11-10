@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_301_FX"/>
+	<classpathentry kind="lib" path="F:/DEVELOPEMENT/JAVA/JDA/JDA-4.3.0_277-withDependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -23,6 +23,12 @@ public class Colors {
 				return "#5865F2";
 			case GRAY:
 				return "#2C2F33";
+			case BLUEVIOLET:
+				return "#7289DA";
+			case DARKGRAY:
+				return "#19272A";
+			case GRAYVIOLET:
+				return "#99AAB5";
 			default:
 				//return an error color code
 				return "#cc0000";
@@ -46,6 +52,12 @@ public class Colors {
 				return "88,101,242";
 			case GRAY:
 				return "44,47,51";
+			case BLUEVIOLET:
+				return "114,137,218";
+			case DARKGRAY:
+				return "35,39,42";
+			case GRAYVIOLET:
+				return "153,170,181";
 			default:
 				//return an error color code
 				return "204,0,0";
@@ -69,6 +81,12 @@ public class Colors {
 				return "blurple";
 			case GRAY:
 				return "gray";
+			case BLUEVIOLET:
+				return "blueviolet";
+			case DARKGRAY:
+				return "darkgray";
+			case GRAYVIOLET:
+				return "grayviolet";
 			default:
 				//return an error color code
 				return "error";

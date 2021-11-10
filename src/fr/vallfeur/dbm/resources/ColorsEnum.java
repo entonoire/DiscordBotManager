@@ -1,7 +1,7 @@
 package fr.vallfeur.dbm.resources;
 
 public enum ColorsEnum {
-
+	
     HEX,
     RGB,
     STRING,
@@ -12,6 +12,9 @@ public enum ColorsEnum {
     RED,
     WHITE,
     BLACK,
-    GRAY
+    GRAY,
+    BLUEVIOLET,
+    GRAYVIOLET,
+    DARKGRAY,
 	
 }
