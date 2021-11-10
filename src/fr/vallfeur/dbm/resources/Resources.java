@@ -1,5 +1,9 @@
 package fr.vallfeur.dbm.resources;
 
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+
 public class Resources {
 
 	public static String get(String name){
@@ -13,10 +17,17 @@ public class Resources {
 		case "eye":
 			value = res.getResource("eye2.png").toString();
 			break;
+		case "ssbtn":
+			value = res.getResource("startstopbutton.css").toString();
+			break;
 		default:
 			break;
 		}
 		return value;
+	}
+	
+	public static Font font(double size){
+		return Font.font("ArialBlack", FontWeight.BOLD, FontPosture.REGULAR, size);
 	}
 	
 }

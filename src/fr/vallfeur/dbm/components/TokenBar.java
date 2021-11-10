@@ -6,9 +6,6 @@ import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
 
 public class TokenBar {
 
@@ -19,7 +16,7 @@ public class TokenBar {
 	private static boolean password = true; //true: show ; false hide
 	
 	public static Node load_field() {
-		field.setFont(Font.font("ArialBlack", FontWeight.BOLD, FontPosture.REGULAR, 12.5));
+		field.setFont(Resources.font(12.5));
 		
 		field.setText("NTAwNzQxMzA1NDYzMjEwMDE5.W8I9rg.GHcUw8Njq45R4tsMO3bsZQHl-y0");
 		field.setPrefSize(477, 20);

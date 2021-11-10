@@ -1,5 +1,6 @@
 package fr.vallfeur.dbm;
 
+import fr.vallfeur.dbm.components.StartStopButton;
 import fr.vallfeur.dbm.components.TokenBar;
 import fr.vallfeur.dbm.resources.Colors;
 import fr.vallfeur.dbm.resources.ColorsEnum;
@@ -19,7 +20,7 @@ public class Main extends Application{
 		Application.launch(str);
 	}
 	
-	
+
 	@Override
 	public void start(Stage stage) throws Exception {
 		
@@ -41,7 +42,7 @@ public class Main extends Application{
 		
 		
 //		-- load all components --
-		children.addAll(TokenBar.load_field(), TokenBar.load_eye());
+		children.addAll(TokenBar.load_field(), TokenBar.load_eye(), StartStopButton.load());
 	}
 	
 }
