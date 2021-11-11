@@ -1,6 +1,6 @@
 package fr.vallfeur.dbm.components.menu;
 
-import fr.vallfeur.dbm.SceneController;
+import fr.vallfeur.dbm.Main;
 import fr.vallfeur.dbm.resources.Resources;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -21,7 +21,7 @@ public class SendMessage {
 		btn.setFont(Resources.font(10));
 		
 		btn.setOnMouseClicked(event -> {
-			SceneController.activate("msg");
+			Main.setPane("msg");
 		});
 		
 		return btn;

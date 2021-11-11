@@ -21,7 +21,6 @@ public class Main extends Application{
 	public static Pane msgpane = new Pane();
     public static ObservableList<Node> children = pane.getChildren();
     protected static Stage stage;
-    public static SceneController sceneController;
     
 	public static void main(String[] str){
 		Application.launch(str);
@@ -43,26 +42,27 @@ public class Main extends Application{
 		stage.setOnCloseRequest(event -> {
 			System.exit(0);
 		});
-		sceneController = new SceneController(stage.getScene());
 //		-- set background color --
 		pane.setStyle("-fx-background-color: rgb("+Colors.get(ColorsEnum.RGB, ColorsEnum.DARKGRAY)+");");
-		
-		
-//		-- load all components for pane --
-
-//		et là j'aimerais bien ajouté les éléments pour msgpane mais ça les affiches pas sur pane après
-		children.addAll(MenuBox.load(), TokenBar.load_field(), TokenBar.load_eye(), StartStopButton.load(), OpenClose.load(), SendMessage.load(), Setting.load());
-
-		
-//		-- load all components for msgpane --
 		msgpane.setStyle(pane.getStyle());
 		
-		
-		sceneController.add("default", pane);
-		sceneController.add("msg", msgpane);
-		SceneController.activate("default");
-		
 		Main.stage = stage;
+		setPane("default");
+	}
+	
+	public static void setPane(String name){
+		switch (name) {
+		case "default":
+			children.clear();
+			children.addAll(MenuBox.load(), TokenBar.load_field(), TokenBar.load_eye(), StartStopButton.load(), OpenClose.load(), SendMessage.load(), Setting.load());
+			stage.getScene().setRoot(pane);
+			break;
+		case "msg":
+			msgpane.getChildren().clear();
+			msgpane.getChildren().addAll(MenuBox.load(), OpenClose.load(), SendMessage.load(), Setting.load());
+			stage.getScene().setRoot(msgpane);
+			break;
+		}
 	}
 	
 }
