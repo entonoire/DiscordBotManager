@@ -7,7 +7,10 @@ import javafx.scene.shape.Rectangle;
 
 public class MenuBox {
 
-	protected static Rectangle box = new Rectangle(100, 720);
+	public static int pos = 825;
+	public static int size = 120;
+	public static Rectangle box = new Rectangle(size, 720);
+	
 	
 	public static Node load(){
 		box.setFill(javafx.scene.paint.Color.valueOf(Colors.get(ColorsEnum.HEX, ColorsEnum.SEMIGRAY)));
@@ -17,7 +20,7 @@ public class MenuBox {
 	}
 	
 	public static void open(){
-		box.setX(845);
+		box.setX(pos);
 	}
 	
 	public static void close(){

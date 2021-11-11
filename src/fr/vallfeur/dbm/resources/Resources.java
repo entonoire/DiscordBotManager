@@ -36,6 +36,9 @@ public class Resources {
 		case "ocmenu":
 			value = res.getResource("openclosemenu.css").toString();
 			break;
+		case "setting":
+			value = res.getResource("setting.png").toString();
+			break;
 		default:
 			break;
 		}
