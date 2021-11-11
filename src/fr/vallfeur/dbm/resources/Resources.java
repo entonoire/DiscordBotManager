@@ -26,6 +26,16 @@ public class Resources {
 			break;
 		case "stopbtn":
 			value = res.getResource("stopbutton.css").toString();
+			break;
+		case "menu":
+			value = res.getResource("menu.png").toString();
+			break;
+		case "smsg":
+			value = res.getResource("sendmsg.png").toString();
+			break;
+		case "ocmenu":
+			value = res.getResource("openclosemenu.css").toString();
+			break;
 		default:
 			break;
 		}
@@ -42,8 +52,7 @@ public class Resources {
 		alert.setTitle(title);
 		alert.setHeaderText(text);
 		alert.showAndWait();
-	}
-	
+	}	
 	public static void popup(String title, String text, AlertType type){
 		Alert alert = new Alert(type);
 		alert.setTitle(title);

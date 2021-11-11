@@ -16,5 +16,6 @@ public enum ColorsEnum {
     BLUEVIOLET,
     GRAYVIOLET,
     DARKGRAY,
+    SEMIGRAY
 	
 }

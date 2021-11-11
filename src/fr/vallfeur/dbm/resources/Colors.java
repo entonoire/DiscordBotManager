@@ -29,6 +29,8 @@ public class Colors {
 				return "#19272A";
 			case GRAYVIOLET:
 				return "#99AAB5";
+			case SEMIGRAY:
+				return "#2F3136";
 			default:
 				//return an error color code
 				return "#cc0000";
@@ -58,6 +60,8 @@ public class Colors {
 				return "35,39,42";
 			case GRAYVIOLET:
 				return "153,170,181";
+			case SEMIGRAY:
+				return "47,49,54";
 			default:
 				//return an error color code
 				return "204,0,0";
@@ -87,6 +91,8 @@ public class Colors {
 				return "darkgray";
 			case GRAYVIOLET:
 				return "grayviolet";
+			case SEMIGRAY:
+				return "semigray";
 			default:
 				//return an error color code
 				return "error";

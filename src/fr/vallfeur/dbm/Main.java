@@ -2,6 +2,8 @@ package fr.vallfeur.dbm;
 
 import fr.vallfeur.dbm.components.StartStopButton;
 import fr.vallfeur.dbm.components.TokenBar;
+import fr.vallfeur.dbm.components.menu.MenuBox;
+import fr.vallfeur.dbm.components.menu.OpenClose;
 import fr.vallfeur.dbm.resources.Colors;
 import fr.vallfeur.dbm.resources.ColorsEnum;
 import javafx.application.Application;
@@ -42,7 +44,8 @@ public class Main extends Application{
 		
 		
 //		-- load all components --
-		children.addAll(TokenBar.load_field(), TokenBar.load_eye(), StartStopButton.load());
+		children.addAll(
+				MenuBox.load(), TokenBar.load_field(), TokenBar.load_eye(), StartStopButton.load(), OpenClose.load());
 	}
 	
 }
