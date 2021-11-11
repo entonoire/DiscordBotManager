@@ -1,0 +1,11 @@
+.button{
+	-fx-background-color: rgba(237,66,69,1); /* RED */
+	-fx-text-fill: rgba(255,255,255,0.9); /* WHITE */
+	-fx-cursor: hand;
+}
+.button:hover{
+	-fx-background-color: rgba(237,66,69,0.8); /* RED */
+}
+.button:pressed{
+	-fx-background-color: rgba(237,66,69,0.6); /* RED */
+}

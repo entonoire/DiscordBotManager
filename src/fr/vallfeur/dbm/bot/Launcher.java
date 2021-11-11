@@ -9,11 +9,14 @@ public class Launcher {
 
 	public static JDA client;
 	
-	public void launch(String token){
+	//true : bot launch ; false : invalid token or another error
+	public static boolean launch(String token){
 		try{
 			client = JDABuilder.createDefault(token).build();
+			return true;
 		}catch(LoginException e){
 			e.printStackTrace();
+			return false;
 		}
 	}
 	

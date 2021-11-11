@@ -18,7 +18,6 @@ public class TokenBar {
 	public static Node load_field() {
 		field.setFont(Resources.font(12.5));
 		
-		field.setText("NTAwNzQxMzA1NDYzMjEwMDE5.W8I9rg.GHcUw8Njq45R4tsMO3bsZQHl-y0");
 		field.setPrefSize(477, 20);
 		field.setLayoutX(20);
 		field.setLayoutY(20);
@@ -45,7 +44,9 @@ public class TokenBar {
 				password = false;
 			}else{
 				field.setText(savedtoken);
-				field.setEditable(true);
+				if(!StartStopButton.running){
+					field.setEditable(true);
+				}
 				password = true;
 			}
 		});
@@ -62,4 +63,12 @@ public class TokenBar {
 		}
 	}
 	
+	
+	public static boolean isEmpty(){
+		return field.getText().length() < 0;
+	}
+	
+	public static void setEditable(boolean bool){
+		field.setEditable(bool);
+	}
 }
