@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.JDABuilder;
 
 public class Launcher {
 
+	public static boolean running = false;
 	public static JDA client;
 	
 	//true : bot launch ; false : invalid token or another error

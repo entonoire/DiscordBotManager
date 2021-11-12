@@ -1,6 +1,7 @@
 package fr.vallfeur.dbm.components;
 
 
+import fr.vallfeur.dbm.bot.Launcher;
 import fr.vallfeur.dbm.resources.Resources;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
@@ -44,7 +45,7 @@ public class TokenBar {
 				password = false;
 			}else{
 				field.setText(savedtoken);
-				if(!StartStopButton.running){
+				if(!Launcher.running){
 					field.setEditable(true);
 				}
 				password = true;
@@ -65,7 +66,7 @@ public class TokenBar {
 	
 	
 	public static boolean isEmpty(){
-		return field.getText().length() < 0;
+		return field.getText().length() == 0;
 	}
 	
 	public static void setEditable(boolean bool){

@@ -22,7 +22,7 @@ public class OpenClose {
 			if(!open){
 				MenuBox.open();
 				SendMessage.open();
-				Setting.close();
+				Setting.open();
 				btn.setLayoutX(MenuBox.pos);
 				btn.setPrefWidth(MenuBox.size);
 				open = true;
@@ -32,6 +32,7 @@ public class OpenClose {
 			}
 		});
 		
+		//close the menu when you change window or the menu will bug (don't know why)
 		if(open){
 			close();
 		}

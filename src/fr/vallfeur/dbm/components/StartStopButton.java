@@ -9,11 +9,17 @@ import javafx.scene.control.Button;
 public class StartStopButton {
 
 	protected static Button btn = new Button();
-	public static boolean running = false;
 	
 	public static Node load(){
-		btn.getStylesheets().add(Resources.get("startbtn"));
-		btn.setText("Start");
+		if(!Launcher.running){
+			btn.getStylesheets().add(Resources.get("startbtn"));
+			btn.setText("Start");
+		}
+		else{
+			btn.getStylesheets().add(Resources.get("stopbtn"));
+			btn.setText("Stop");
+		}
+		
 		btn.setFont(Resources.font(17));
 		btn.setLayoutX(20);
 		btn.setLayoutY(80);
@@ -25,7 +31,7 @@ public class StartStopButton {
 						btn.getStylesheets().clear();
 						btn.getStylesheets().add(Resources.get("stopbtn"));
 						btn.setText("Stop");
-						running = true;
+						Launcher.running = true;
 						TokenBar.setEditable(false);
 					}
 					else{
@@ -38,10 +44,11 @@ public class StartStopButton {
 			}
 			else{
 				Launcher.client.shutdown();
+				System.err.println("[JDA MainWS-ReadThread] INFO JDA - Bot off!");
 				btn.getStylesheets().clear();
 				btn.getStylesheets().add(Resources.get("startbtn"));
 				btn.setText("Start");
-				running = false;
+				Launcher.running = false;
 				TokenBar.setEditable(true);
 			}
 		});
