@@ -1,0 +1,20 @@
+.text-area .content{
+	-fx-padding: 5px;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgba(44,47,51);/* GRAY */
+   	-fx-border-radius: 5px;
+  	-fx-background-radius: 0 ;
+}
+.text-area{
+	-fx-background-color: rgba(44,47,51);/* GRAY */
+	-fx-background-insets: 0;
+	-fx-border-color: #2C2F33;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+	-fx-border-radius: 0px;
+  	-fx-background-radius: 0px;
+  	-fx-text-fill: white;
+}
+.text-area:focused {
+	-fx-border-color: #5865F2;
+}

@@ -39,6 +39,14 @@ public class Resources {
 		case "setting":
 			value = res.getResource("setting.png").toString();
 			break;
+		case "cb":
+			value = res.getResource("cb.css").toString();
+			break;
+		case "area":
+			value = res.getResource("area.css").toString();
+			break;
+		case "send":
+			value = res.getResource("send2.png").toString();
 		default:
 			break;
 		}

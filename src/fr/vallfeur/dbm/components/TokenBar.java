@@ -19,6 +19,10 @@ public class TokenBar {
 	public static Node load_field() {
 		field.setFont(Resources.font(12.5));
 		
+		
+//		field.setText("");
+		
+		
 		field.setPrefSize(477, 20);
 		field.setLayoutX(20);
 		field.setLayoutY(20);
